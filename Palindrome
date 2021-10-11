@@ -1,0 +1,15 @@
+import math
+text = input("Enter text to check for palindrome:")
+x=len(text)
+for index in range(round(len(text)/2)):
+    
+    if text[index].lower() == (text[x-1]).lower():        
+        x=x-1        
+    else:
+        break
+if x == math.ceil(len(text)/2):
+    print('The input is palindrome')
+else:
+    print('The input is not palindrome')
+       
+=========================================================
