@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 13 00:33:06 2021
+
+@author: jyothi
+
+Given a string representing the sequence of moves a robot vacuum makes, 
+return whether or not it will return to its original position.
+ The string will only contain L, R, U, and D characters, representing left, right, up,
+ and down respectively.
+"""
+
+path = input("Enter text to check if vaccum cleaner route is complete:")
+countR=path.upper().count('R')
+countU=path.upper().count('U')
+countD=path.upper().count('D')
+countL=path.upper().count('L')
+if ((countR == countL) and (countU == countD)):
+    print('The Robo returned to original position')
+else:
+    print('The Robo has not returned to original position')
+       
