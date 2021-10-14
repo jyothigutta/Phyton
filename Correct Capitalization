@@ -17,7 +17,7 @@ Ex: Given the following strings...
 flag1=0
 flag2=1
 
-text=input('Enter string to check for correct capitalization')
+text=input('Enter string to check for correct capitalization: ')
 n = len(text)
 if text.islower() or text.isupper():
     flag1=1
