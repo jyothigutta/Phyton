@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 15 02:36:53 2021
+
+@author: jyothi
+
+Given two binary strings (strings containing only 1s and 0s) return their sum (also as a binary string).
+Note: neither binary string will contain leading 0s unless the string itself is 0
+"""
+
+a=input('Enter the first number: ')
+a=input('Enter the second number: ')
+
+sum = bin(int(a, 2) + int(b, 2))
+  
+# Printing result
+print(sum[2:])
+
