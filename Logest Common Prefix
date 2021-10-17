@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 16 02:36:53 2021
+
+@author: jyothi
+
+Given an array of strings, return the longest common prefix that is
+ shared amongst all strings.
+ 
+ ["colorado", "color", "cold"], return "col"
+["a", "b", "c"], return ""
+["spot", "spotty", "spotted"], return "spot"
+
+"""
+
+text1= input('Enter string1 ')
+text2= input('Enter string2 ')
+text3= input('Enter string3 ')
+i=0
+result=''
+try:
+    while(1):
+        if text1[i]==text2[i] and text2[i]==text3[i]:
+            result+=text1[i]
+            i+=1
+        else:
+            break
+except:
+    print('Longest Common Prefix is ',result)
