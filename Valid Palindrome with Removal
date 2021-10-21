@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 22 01:50:33 2021
+
+@author: jyothi
+
+Given a string and the ability to delete at most one character, return whether or not it can form a palindrome.
+
+
+"""
+
+class Palindrome:
+
+    def validPalindromePop(self,s) :              
+        i = 0
+        j = len(s) - 1
+        while i < j:
+            if s[i] == s[j]:
+                i += 1
+                j -= 1
+            else:
+                return self.validPalindrome(s, i + 1, j) or self.validPalindrome(s, i, j - 1)
+        return True
+  
+    
+    def validPalindrome(self, s, i, j):
+        while i < j:
+            if s[i] == s[j]:
+                i += 1
+                j -= 1
+            else:
+                return False        
+        return True
