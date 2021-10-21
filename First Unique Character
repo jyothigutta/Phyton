@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 22 02:23:36 2021
+
+@author: jyothi
+
+Given a string, return the index of its first unique character.
+If a unique character does not exist, return -1.
+
+"""
+
+class Solution(object):
+   def firstUniqChar(self, s):
+      """
+      :type s: str
+      :rtype: int
+      """
+      frequency = {}
+      for i in s:
+         if i not in frequency:
+            frequency[i] = 1
+         else:
+            frequency[i] +=1
+      for i in range(len(s)):
+         if frequency[s[i]] == 1:
+            return i
+      return -1
