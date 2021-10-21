@@ -1,0 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct 22 02:23:36 2021
+
+@author: jyothi
+
+Given a string representing your stones and another string representing a
+list of jewels, return the number of stones that you have that are also jewels.
+
+"""
+
+stones=input("Enter first string:")
+jewels=input("Enter second string:")
+a=list(set(stones)&set(jewels))
+print("The number of common letters are:",len(a))    
+print("The common letters are:")
+for i in a:
+    print(i)
