@@ -1,0 +1,30 @@
+"""
+
+Given an array of integers, return whether or not two numbers sum to a given target, k.
+
+A simple solution to this problem might try picking two numbers and seeing if they sum to k. If they do we return true and if we iterate through all the numbers not being able to find such a pair, we return false.
+
+public boolean twoSum(int[] nums, int target) {
+    for (int i = 0; i < nums.length; i++) {
+        for (int j = i + 1; j < nums.length; j++) {
+            if (nums[i] + nums[j] == k) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+While this approach works, it’s rather slow resulting from its O(N2) runtime. N2 coming from us comparing each of our N numbers to every other number in our array.
+
+"""
+public boolean twoSum(int[] nums, int k) {
+    HashMap<Integer, Integer> map = new HashMap<>();
+    for(int i = 0; i < nums.length; i++) {
+        int difference = k - nums[i];
+        if(map.containsKey(difference)) {
+            return true;
+        }
+        map.put(nums[i], i);
+    }
+    return false;
+}
